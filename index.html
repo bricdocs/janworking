@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Jannersten Scanner</title>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+    <video
+        id="video"
+        autoplay
+        playsinline
+        muted
+        style="display:none;">
+    </video>
+<canvas id="canvas"></canvas>
+
+<canvas
+    id="warpCanvas"
+    width="200"
+    height="300">
+</canvas>
+<canvas
+    id="cornerCanvas"
+    width="70"
+    height="125">
+</canvas>
+<canvas
+    id="grayCanvas"
+    width="50"
+    height="90">
+</canvas>
+<canvas
+    id="binaryCanvas"
+    width="65"
+    height="120">
+</canvas>
+    
+<canvas
+    id="rankCanvas"
+    width="60"
+    height="40">
+</canvas>
+
+<canvas
+    id="suitCanvas"
+    width="60"
+    height="40">
+</canvas>
+
+<button onclick="saveDebugImages()">
+    Save Debug Images
+</button>
+    
+<button id="debugBtn">
+    Debug Frame
+</button>
+    
+<!-- OpenCV -->
+<script async src="https://docs.opencv.org/4.x/opencv.js"></script>
+<!-- Project -->
+<script src="js/opencvLoader.js"></script>
+<script src="js/camera.js"></script>
+<script src="js/cardDetector.js"></script>
+<script src="js/cardRecognizer.js"></script>
+<script src="js/templateMatcher.js"></script>
+<script src="js/app.js"></script>
+
+</body>
+
+</html>
